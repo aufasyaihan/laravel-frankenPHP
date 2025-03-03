@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('krs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_krs');
+            $table->string('nim', 255);
+            $table->string('kode matakuliah', 255);
+            $table->string('matakuliah', 255);
+            $table->integer('semester');
+            $table->integer('tahunakademik');
         });
     }
 
